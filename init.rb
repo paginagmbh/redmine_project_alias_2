@@ -1,6 +1,8 @@
 require 'redmine'
 require 'dispatcher'
 
+require_dependency 'project_alias_hook'
+
 RAILS_DEFAULT_LOGGER.info 'Starting Project Alias plugin for Redmine'
 
 # TODO: Let rename project (change default identifier)
@@ -19,4 +21,9 @@ Redmine::Plugin.register :project_alias_plugin do
     description 'Allows adding project identifier aliases.'
     url 'http://projects.andriylesyuk.com/projects/redmine-alias'
     version '0.0.1'
+
+    menu :admin_menu, :project_aliases,
+                    { :controller => 'project_aliases', :action => 'index' },
+                      :caption => :label_project_alias_plural,
+                      :after => :projects
 end

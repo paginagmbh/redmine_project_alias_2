@@ -1,0 +1,32 @@
+<div class="contextual">
+  <%= link_to(l(:label_project_alias_new), { :action => 'new' }, :class => 'icon icon-add') %>
+</div>
+
+<h2><%= l(:label_project_alias_plural) %></h2>
+
+<% if @aliases.any? %>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th><%= l(:field_alias) %></th>
+      <th><%= l(:field_identifier) %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @aliases.each do |project_alias| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= project_alias.alias %></td>
+      <td><%= project_alias.identifier %></td>
+      <td></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<% else %>
+<p class="nodata"><%= l(:label_no_data) %></p>
+<% end %>
+
+<% html_title(l(:label_project_alias_plural)) %>
