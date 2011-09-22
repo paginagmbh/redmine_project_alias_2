@@ -3,3 +3,5 @@ en:
   label_project_alias_new: New project alias
 
   field_alias: Alias
+
+  button_use_as_identifier: Use as identifier

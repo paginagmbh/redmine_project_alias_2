@@ -1,3 +1,6 @@
 #admin-menu a.project-aliases {
-    background-image: url("../images/aliases.png");
+    background-image: url(../images/aliases.png);
+}
+.icon-rename {
+    background-image: url(../images/rename.png);
 }

@@ -1,0 +1,5 @@
+<h2><%= link_to(l(:label_project_alias_plural), { :controller => 'project_aliases', :action => 'index' }) %> &#187; <%= l(:label_project_alias_new) %></h2>
+
+<% form_for(@alias, :url => { :action => 'create' }, :builder => TabularFormBuilder) do |f| %>
+<p><%= f.submit(l(:button_create)) %></p>
+<% end %>

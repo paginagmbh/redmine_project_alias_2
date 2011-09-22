@@ -15,10 +15,7 @@ module AliasProjectPatch
         def find_by_identifier(*args)
             if args.first
                 project_alias = ProjectAlias.find_by_alias(args.first)
-                if project_alias
-                    RAILS_DEFAULT_LOGGER.info "Using project identifier #{project_alias.identifier}"
-                    args[0] = project_alias.identifier
-                end
+                return project_alias.project if project_alias
             end
             find_all_by_identifier(*args).first
         end

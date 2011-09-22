@@ -11,15 +11,23 @@
     <tr>
       <th><%= l(:field_alias) %></th>
       <th><%= l(:field_identifier) %></th>
+      <th><%= l(:field_project) %></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
   <% @aliases.each do |project_alias| %>
     <tr class="<%= cycle('odd', 'even') %>">
-      <td><%= project_alias.alias %></td>
-      <td><%= project_alias.identifier %></td>
-      <td></td>
+      <td><%= link_to(project_alias.alias, { :controller => 'projects', :action => 'show', :id => project_alias.alias }) %></td>
+      <td><%= link_to(project_alias.project.identifier, { :controller => 'projects', :action => 'show', :id => project_alias.project.identifier }) %></td>
+      <td><%= link_to_project(project_alias.project) %></td>
+      <td class="buttons">
+        <%= link_to(l(:button_use_as_identifier), { :action => 'rename', :id => project_alias }, :class => 'icon icon-rename' ) %>
+        <%= link_to(l(:button_delete), { :action => 'destroy', :id => project_alias },
+                                         :confirm => l(:text_are_you_sure),
+                                         :method => :delete,
+                                         :class => 'icon icon-del') %>
+      </td>
     </tr>
   <% end %>
   </tbody>

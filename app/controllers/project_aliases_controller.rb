@@ -7,4 +7,9 @@ class ProjectAliasesController < ApplicationController
         @aliases = ProjectAlias.all # FIXME: (:order => :alias)
     end
 
+    def new
+        @alias = ProjectAlias.new
+        @projects = Project.find(:all)
+    end
+
 end
