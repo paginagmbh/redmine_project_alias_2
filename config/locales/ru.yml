@@ -1,0 +1,15 @@
+ru:
+  label_project_alias_plural: Псевдонимы проектов
+  label_project_alias_new: Новый псевдоним проекта
+
+  field_alias: Псевдоним
+
+  button_use_as_identifier: Использовать как идентификатор
+
+  text_allowed_characters: Допустимы строчные буквы (a-z), цифры и дефис.
+
+  activerecord:
+    errors:
+      messages:
+        same_as_identifier: не может быть равен идентификатору
+        identifier_exists: равен идентификатору другого проекта

@@ -5,7 +5,6 @@ require_dependency 'project_alias_hook'
 
 RAILS_DEFAULT_LOGGER.info 'Starting Project Alias plugin for Redmine'
 
-# TODO: Let rename project (change default identifier)
 # TODO: perhaps also use rev=canonical
 
 Dispatcher.to_prepare :project_alias_plugin do

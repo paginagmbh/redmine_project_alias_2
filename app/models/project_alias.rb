@@ -8,8 +8,30 @@ class ProjectAlias < ActiveRecord::Base
     validates_exclusion_of :alias, :in => %w(new)
 
     def validate
-        errors.add(:same_as_identifier) if self.alias == self.project.identifier # FIXME
-        errors.add(:identifier_exists)  if Project.find_all_by_identifier(self.alias).any? # FIXME
+        if self.alias == self.project.identifier
+            errors.add(:alias, :same_as_identifier)
+        elsif Project.find_all_by_identifier(self.alias).any?
+            errors.add(:alias, :identifier_exists)
+        end
+    end
+
+    def rename!
+        if Project.connection.update("UPDATE #{Project.table_name} " +
+                                     "SET identifier = '#{self.alias}' " +
+                                     "WHERE id = #{project.id}") > 0
+            if Project.connection.update("UPDATE #{ProjectAlias.table_name} " +
+                                         "SET alias = '#{project.identifier}' " +
+                                         "WHERE id = #{id}") > 0
+                true
+            else
+                Project.connection.update("UPDATE #{Project.table_name} " +
+                                          "SET identifier = '#{project.identifier}' " +
+                                          "WHERE id = #{project.id}")
+                false
+            end
+        else
+            false
+        end
     end
 
 end

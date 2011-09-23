@@ -1,5 +1,7 @@
 require_dependency 'project'
 
+# TODO: do not allow creating projects with identifier available as alias
+
 module AliasProjectPatch
 
     def self.included(base)

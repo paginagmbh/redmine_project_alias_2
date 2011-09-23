@@ -7,3 +7,9 @@ en:
   button_use_as_identifier: Use as identifier
 
   text_allowed_characters: Only lower case letters (a-z), numbers and dashes are allowed.
+
+  activerecord:
+    errors:
+      messages:
+        same_as_identifier: can't be the same as identifier
+        identifier_exists: is the same as identifier of another project
