@@ -5,3 +5,5 @@ en:
   field_alias: Alias
 
   button_use_as_identifier: Use as identifier
+
+  text_allowed_characters: Only lower case letters (a-z), numbers and dashes are allowed.

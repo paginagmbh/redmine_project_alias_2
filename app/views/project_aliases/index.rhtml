@@ -1,12 +1,12 @@
 <div class="contextual">
-  <%= link_to(l(:label_project_alias_new), { :action => 'new' }, :class => 'icon icon-add') %>
+  <%= link_to(l(:label_project_alias_new), { :action => 'new' }, :class => 'icon icon-add') if @projects.any? %>
 </div>
 
 <h2><%= l(:label_project_alias_plural) %></h2>
 
 <% if @aliases.any? %>
 
-<table class="list">
+<table class="list"><!-- TODO: sort -->
   <thead>
     <tr>
       <th><%= l(:field_alias) %></th>
