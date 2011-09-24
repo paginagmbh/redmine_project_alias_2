@@ -5,8 +5,6 @@ require_dependency 'project_alias_hook'
 
 RAILS_DEFAULT_LOGGER.info 'Starting Project Alias plugin for Redmine'
 
-# TODO: perhaps also use rev=canonical
-
 Dispatcher.to_prepare :project_alias_plugin do
     unless Project.included_modules.include?(AliasProjectPatch)
         Project.send(:include, AliasProjectPatch)

@@ -5,13 +5,14 @@
 <h2><%= l(:label_project_alias_plural) %></h2>
 
 <% if @aliases.any? %>
+<div class="autoscroll">
 
-<table class="list"><!-- TODO: sort -->
+<table class="list">
   <thead>
     <tr>
-      <th><%= l(:field_alias) %></th>
-      <th><%= l(:field_identifier) %></th>
-      <th><%= l(:field_project) %></th>
+      <%= sort_header_tag('alias', :caption => l(:field_alias)) %>
+      <%= sort_header_tag('identifier', :caption => l(:field_identifier)) %>
+      <%= sort_header_tag('project', :caption => l(:field_project)) %>
       <th></th>
     </tr>
   </thead>
@@ -33,6 +34,7 @@
   </tbody>
 </table>
 
+</div>
 <% else %>
 <p class="nodata"><%= l(:label_no_data) %></p>
 <% end %>

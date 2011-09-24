@@ -3,9 +3,19 @@ class ProjectAliasesController < ApplicationController
 
     before_filter :require_admin
 
+    helper :sort
+    include SortHelper
+
     def index
-        @aliases = ProjectAlias.find(:all) # FIXME: (:order => :alias)
+        sort_init('alias')
+        sort_update(
+            'alias'      => "#{ProjectAlias.table_name}.alias",
+            'identifier' => "#{Project.table_name}.identifier",
+            'project'    => "#{Project.table_name}.name"
+        )
         @projects = Project.visible.find(:all)
+        @aliases = ProjectAlias.find(:all, :include => :project, :order => sort_clause)
+        render(:layout => !request.xhr?)
     end
 
     def new
