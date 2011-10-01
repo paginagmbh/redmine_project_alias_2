@@ -3,7 +3,7 @@ class ProjectAlias < ActiveRecord::Base
 
     validates_presence_of :project, :alias
     validates_uniqueness_of :alias
-    validates_length_of :alias, :in => 1..Project::IDENTIFIER_MAX_LENGTH
+    validates_length_of :alias, :in => Project.const_defined?(:IDENTIFIER_MAX_LENGTH) ? 1..Project::IDENTIFIER_MAX_LENGTH : 1..20
     validates_format_of :alias, :with => /^(?!\d+$)[a-z0-9\-]*$/
     validates_exclusion_of :alias, :in => %w(new)
 
