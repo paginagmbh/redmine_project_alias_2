@@ -1,0 +1,15 @@
+pt:
+  label_project_alias_plural: Nome alternativo de projectos
+  label_project_alias_new: Novo nome alternativo de projecto
+
+  field_alias: Nome alternativo
+
+  button_use_as_identifier: Usar como identificador
+
+  text_allowed_characters: Apenas letras minúsculas (a-z), números e traços - são suportados.
+
+  activerecord:
+    errors:
+      messages:
+        same_as_identifier: não pode ser o mesmo identificador
+        identifier_exists: é o mesmo identificador de outro projecto
