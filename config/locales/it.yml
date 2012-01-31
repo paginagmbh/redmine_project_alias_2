@@ -1,0 +1,15 @@
+it:
+  label_project_alias_plural: Alias di progetto
+  label_project_alias_new: Nuovo alias di progetto
+
+  field_alias: Alias
+
+  button_use_as_identifier: Usa come identificatore
+
+  text_allowed_characters: Ammessi solo lettere minuscole (a-z), numeri e trattini.
+
+  activerecord:
+    errors:
+      messages:
+        same_as_identifier: non può essere uguale all'identificatore
+        identifier_exists: identificatore già esistente
