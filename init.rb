@@ -9,6 +9,9 @@ Dispatcher.to_prepare :project_alias_plugin do
     unless Project.included_modules.include?(AliasProjectPatch)
         Project.send(:include, AliasProjectPatch)
     end
+    unless ApplicationHelper.included_modules.include?(AliasApplicationHelperPatch)
+        ApplicationHelper.send(:include, AliasApplicationHelperPatch)
+    end
 end
 
 Redmine::Plugin.register :project_alias_plugin do
@@ -17,7 +20,7 @@ Redmine::Plugin.register :project_alias_plugin do
     author_url 'http://www.andriylesyuk.com'
     description 'Allows adding project identifier aliases.'
     url 'http://projects.andriylesyuk.com/projects/redmine-alias'
-    version '0.0.1b'
+    version '0.0.2'
 
     menu :admin_menu, :project_aliases,
                     { :controller => 'project_aliases', :action => 'index' },
