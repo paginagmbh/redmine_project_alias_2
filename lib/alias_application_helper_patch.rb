@@ -17,7 +17,7 @@ module AliasApplicationHelperPatch
     module InstanceMethods
 
         def parse_redmine_links_with_project_alias(text, project, obj, attr, only_path, options)
-            text.gsub!(%r{([\s\(,\-\[\>]|^)(!)?(([a-z0-9\-]+):)?project:([^"\s<>][^\s<>]*?|"[^"]+?")(?=(?=[[:punct:]]\W)|,|\s|\]|<|$)}) do |m|
+            text.gsub!(%r{([\s\(,\-\[\>]|^)(!)?(([a-z0-9\-_]+):)?project:([^"\s<>][^\s<>]*?|"[^"]+?")(?=(?=[[:punct:]]\W)|,|\s|\]|<|$)}) do |m|
                 leading, esc, project_prefix, project_identifier, identifier = $1, $2, $3, $4, $5, $6
                 link = nil
                 if esc.nil?

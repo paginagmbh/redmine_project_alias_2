@@ -27,7 +27,7 @@
         <%= link_to(l(:button_delete), { :action => 'destroy', :id => project_alias },
                                          :confirm => l(:text_are_you_sure),
                                          :method => :delete,
-                                         :class => 'icon icon-del') %>
+                                         :class => 'icon icon-del') unless project_alias.undeletable? %>
       </td>
     </tr>
   <% end %>
