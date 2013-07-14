@@ -1,0 +1,15 @@
+tr:
+  label_project_alias_plural: Proje takma adları
+  label_project_alias_new: Yeni takma ad
+
+  field_alias: Takma ad
+
+  button_use_as_identifier: Tanımlayıcı olarak kullan
+
+  text_allowed_characters: Sadece küçük harfler (a-z), sayılar ve noktalamaya izin verilmiştir.
+
+  activerecord:
+    errors:
+      messages:
+        same_as_identifier: tanımlayıcı ile aynı olamaz
+        identifier_exists: başka  bir projenin tanımlayıcı ile aynı

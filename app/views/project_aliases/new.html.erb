@@ -1,6 +1,6 @@
 <h2><%= link_to(l(:label_project_alias_plural), { :controller => 'project_aliases', :action => 'index' }) %> &#187; <%= l(:label_project_alias_new) %></h2>
 
-<%= error_messages_for :alias %>
+<%= error_messages_for 'alias' %>
 
 <% form_for(@alias, :url => { :action => 'create' }, :builder => (defined? TabularFormBuilder) ? TabularFormBuilder : Redmine::Views::LabelledFormBuilder) do |f| %><!-- FIXME: Chili 3 -->
   <div class="box tabular">
