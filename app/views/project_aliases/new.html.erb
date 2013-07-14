@@ -2,7 +2,7 @@
 
 <%= error_messages_for :alias %>
 
-<% form_for(@alias, :url => { :action => 'create' }, :builder => TabularFormBuilder) do |f| %>
+<% form_for(@alias, :url => { :action => 'create' }, :builder => (defined? TabularFormBuilder) ? TabularFormBuilder : Redmine::Views::LabelledFormBuilder) do |f| %><!-- FIXME: Chili 3 -->
   <div class="box tabular">
     <p>
       <%= f.text_field(:alias, :size => 60, :required => true) %><br />

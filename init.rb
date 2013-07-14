@@ -1,11 +1,10 @@
 require 'redmine'
-require 'dispatcher'
 
 require_dependency 'project_alias_hook'
 
-RAILS_DEFAULT_LOGGER.info 'Starting Project Alias plugin for Redmine'
+Rails.logger.info 'Starting Project Alias plugin for Redmine'
 
-Dispatcher.to_prepare :project_alias_plugin do
+Rails.configuration.to_prepare do
     unless Project.included_modules.include?(AliasProjectPatch)
         Project.send(:include, AliasProjectPatch)
     end
@@ -14,7 +13,7 @@ Dispatcher.to_prepare :project_alias_plugin do
     end
 end
 
-Redmine::Plugin.register :project_alias_plugin do
+Redmine::Plugin.register :project_alias do
     name 'Project Alias'
     author 'Andriy Lesyuk'
     author_url 'http://www.andriylesyuk.com'
