@@ -5,6 +5,9 @@ require_dependency 'project_alias_hook'
 Rails.logger.info 'Starting Project Alias plugin for Redmine'
 
 Rails.configuration.to_prepare do
+    unless String.method_defined?(:html_safe)
+        String.send(:include, AliasStringHTMLSafePatch)
+    end
     unless Project.included_modules.include?(AliasProjectPatch)
         Project.send(:include, AliasProjectPatch)
     end

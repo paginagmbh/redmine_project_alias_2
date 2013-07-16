@@ -18,12 +18,12 @@ class ProjectAliasHook  < Redmine::Hook::ViewListener
             if params[:project_id]
                 if context[:project].aliases.include?(params[:project_id])
                     params[:project_id] = context[:project].identifier
-                    tags += '<link rel="canonical" href="' + url_for(params) + '" />'
+                    tags += '<link rel="canonical" href="'.html_safe + url_for(params) + '" />'.html_safe
                 end
             elsif params[:id]
                 if context[:project].aliases.include?(params[:id])
                     params[:id] = context[:project].identifier
-                    tags += '<link rel="canonical" href="' + url_for(params) + '" />'
+                    tags += '<link rel="canonical" href="'.html_safe + url_for(params) + '" />'.html_safe
                 end
             end
         end
