@@ -9,5 +9,11 @@ if Rails::VERSION::MAJOR < 3
     end
 
 else
-    # TODO
+
+    match 'project_aliases', :to => 'project_aliases#index'
+    match 'project_aliases/new', :to => 'project_aliases#new'
+    match 'project_aliases/create', :to => 'project_aliases#create'
+    match 'project_aliases/:id/destroy', :to => 'project_aliases#destroy'
+    match 'project_aliases/:id/rename', :to => 'project_aliases#rename'
+
 end
