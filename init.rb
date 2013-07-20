@@ -21,7 +21,7 @@ Redmine::Plugin.register :project_alias do
     author 'Andriy Lesyuk'
     author_url 'http://www.andriylesyuk.com'
     description 'Allows adding project identifier aliases.'
-    url 'http://projects.andriylesyuk.com/projects/redmine-alias'
+    url 'http://projects.andriylesyuk.com/projects/project-alias'
     version '0.1.0'
 
     menu :admin_menu, :project_aliases,

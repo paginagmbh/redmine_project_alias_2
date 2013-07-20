@@ -7,6 +7,7 @@ module AliasApplicationHelperPatch
         base.send(:include, InstanceMethods)
         base.class_eval do
             unloadable
+
             alias_method_chain :parse_redmine_links, :project_alias
         end
     end
@@ -28,7 +29,7 @@ module AliasApplicationHelperPatch
                         link = link_to_project(p, { :only_path => only_path }, :class => 'project')
                     end
                 end
-                (leading + (link || "#{project_prefix}project:#{identifier}")).html_safe # FIXME html_safe can be unsupported for older versions
+                (leading + (link || "#{project_prefix}project:#{identifier}")).html_safe
             end
 
             parse_redmine_links_without_project_alias(text, project, obj, attr, only_path, options)
