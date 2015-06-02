@@ -19,7 +19,7 @@ module AliasProjectPatch
                 project_alias = ProjectAlias.find_by_alias(args.first)
                 return project_alias.project if project_alias
             end
-            find_all_by_identifier(*args).first
+            find_by(:identifier => args.first)
         end
 
     end

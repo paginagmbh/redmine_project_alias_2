@@ -13,6 +13,8 @@ class ProjectAlias < ActiveRecord::Base
     validates_format_of :alias, :with => IDENTIFIER_RE
     validates_exclusion_of :alias, :in => %w(new)
 
+	attr_accessible :alias, :project_id
+
     def validate
         if self.alias == self.project.identifier
             errors.add(:alias, :same_as_identifier)
