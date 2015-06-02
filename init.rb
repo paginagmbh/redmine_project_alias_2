@@ -18,11 +18,10 @@ end
 
 Redmine::Plugin.register :project_alias do
     name 'Project Alias'
-    author 'Andriy Lesyuk'
-    author_url 'http://www.andriylesyuk.com'
+    author 'Andriy Lesyuk & Tobias Fischer'
     description 'Allows adding project identifier aliases.'
-    url 'http://projects.andriylesyuk.com/projects/project-alias'
-    version '0.1.0'
+    url 'https://github.com/paginagmbh/redmine_project-alias'
+    version '0.2.0'
 
     menu :admin_menu, :project_aliases,
                     { :controller => 'project_aliases', :action => 'index' },
