@@ -1,7 +1,7 @@
 class ProjectAliasHook  < Redmine::Hook::ViewListener
 
     def view_layouts_base_html_head(context = {})
-        tags = stylesheet_link_tag('admin', :plugin => 'project_alias')
+        tags = stylesheet_link_tag('admin', :plugin => 'redmine_project_alias_2')
 
         if context[:project]
             params = {}
