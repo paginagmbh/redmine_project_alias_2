@@ -1,8 +1,8 @@
 <div class="contextual">
-  <%= link_to(l(:label_project_alias_new), { :action => 'new' }, :class => 'icon icon-add') if @projects.any? %>
+  <%= link_to(l(:label_alias_new), { :action => 'new' }, :class => 'icon icon-add') if @projects.any? %>
 </div>
 
-<h2><%= l(:label_project_alias_plural) %></h2>
+<h2><%= l(:label_alias_plural) %></h2>
 
 <% if @aliases.any? %>
 <div class="autoscroll">
@@ -39,4 +39,4 @@
 <p class="nodata"><%= l(:label_no_data) %></p>
 <% end %>
 
-<% html_title(l(:label_project_alias_plural)) %>
+<% html_title(l(:label_alias_plural)) %>

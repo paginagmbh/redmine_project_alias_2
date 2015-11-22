@@ -25,6 +25,6 @@ Redmine::Plugin.register :project_alias do
 
     menu :admin_menu, :project_aliases,
                     { :controller => 'project_aliases', :action => 'index' },
-                      :caption => :label_project_alias_plural,
+                      :caption => :label_alias_plural,
                       :after => :projects
 end

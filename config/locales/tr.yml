@@ -1,6 +1,6 @@
 tr:
-  label_project_alias_plural: Proje takma adları
-  label_project_alias_new: Yeni takma ad
+  label_alias_plural: Proje takma adları
+  label_alias_new: Yeni takma ad
 
   field_alias: Takma ad
 

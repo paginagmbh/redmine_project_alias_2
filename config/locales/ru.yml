@@ -1,6 +1,6 @@
 ru:
-  label_project_alias_plural: Псевдонимы проектов
-  label_project_alias_new: Новый псевдоним проекта
+  label_alias_plural: Псевдонимы проектов
+  label_alias_new: Новый псевдоним проекта
 
   field_alias: Псевдоним
 

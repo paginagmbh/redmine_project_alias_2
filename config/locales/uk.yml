@@ -1,6 +1,6 @@
 uk:
-  label_project_alias_plural: Псевдоніми проектів
-  label_project_alias_new: Новий псевдонім проекту
+  label_alias_plural: Псевдоніми проектів
+  label_alias_new: Новий псевдонім проекту
 
   field_alias: Псевдонім
 

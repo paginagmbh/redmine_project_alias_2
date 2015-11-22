@@ -1,6 +1,6 @@
 it:
-  label_project_alias_plural: Alias di progetto
-  label_project_alias_new: Nuovo alias di progetto
+  label_alias_plural: Alias di progetto
+  label_alias_new: Nuovo alias di progetto
 
   field_alias: Alias
 
