@@ -23,7 +23,7 @@
       <td><%= link_to(project_alias.project.identifier, { :controller => 'projects', :action => 'show', :id => project_alias.project.identifier }) %></td>
       <td><%= link_to_project(project_alias.project) %></td>
       <td class="buttons">
-        <%= link_to(l(:button_use_as_identifier), { :action => 'rename', :id => project_alias }, :class => 'icon icon-rename' ) %>
+		  <%= link_to(project_alias.undeletable? ? l(:button_restore_identifier) : l(:button_use_as_identifier), { :action => 'rename', :id => project_alias }, :class => 'icon icon-rename' ) %>
         <%= link_to(l(:button_delete), { :action => 'destroy', :id => project_alias },
                                          :confirm => l(:text_are_you_sure),
                                          :method => :delete,

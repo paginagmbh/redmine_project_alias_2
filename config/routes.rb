@@ -13,7 +13,7 @@ else
     match 'project_aliases', :to => 'project_aliases#index', via: [:get, :post]
     match 'project_aliases/new', :to => 'project_aliases#new', via: [:get, :post]
     match 'project_aliases/create', :to => 'project_aliases#create', via: [:get, :post]
-    match 'project_aliases/:id/destroy', :to => 'project_aliases#destroy', via: [:get, :post]
+	match 'project_aliases/:id/destroy', :to => 'project_aliases#destroy', via: [:delete]
     match 'project_aliases/:id/rename', :to => 'project_aliases#rename', via: [:get, :post]
 
 end

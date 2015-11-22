@@ -28,7 +28,7 @@ class ProjectAlias < ActiveRecord::Base
                                      "SET identifier = '#{self.alias}' " +
                                      "WHERE id = #{project.id}") > 0
             if Project.connection.update("UPDATE #{ProjectAlias.table_name} " +
-                                         "SET alias = '#{project.identifier}', undeletable = 1 " +
+                                         "SET alias = '#{project.identifier}', undeletable = #{!self.undeletable} " +
                                          "WHERE id = #{id}") > 0
                 true
             else

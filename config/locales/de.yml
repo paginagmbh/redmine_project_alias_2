@@ -5,6 +5,7 @@ de:
   field_alias: Alias
 
   button_use_as_identifier: Alias als offizielle ID benutzen
+  button_restore_identifier: Original-ID reaktivieren
 
   text_allowed_characters: Kleinbuchstaben (a-z), Ziffern und Bindestriche erlaubt.
 
