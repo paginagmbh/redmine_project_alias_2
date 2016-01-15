@@ -25,7 +25,7 @@ module AliasApplicationHelperPatch
                     name = identifier.gsub(%r{^"(.*)"$}, "\\1")
                     if p = ProjectAlias.find_by_alias(name.downcase)
                         link = link_to_project(p.project, { :only_path => only_path }, :class => 'project')
-                    elsif p = Project.visible.find(:first, :conditions => [ "identifier = :s OR LOWER(name) = :s", { :s => name.downcase } ])
+                    elsif p = Project.visible.where([ "identifier = :s OR LOWER(name) = :s", { :s => name.downcase } ]).first
                         link = link_to_project(p, { :only_path => only_path }, :class => 'project')
                     end
                 end
