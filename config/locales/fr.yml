@@ -1,0 +1,17 @@
+# French text strings for buttons and labels
+fr:
+  label_alias_plural: Alias projets
+  label_alias_new: Nouvel alias projet
+
+  field_alias: Alias
+
+  button_use_as_identifier: Utiliser un alias comme identifiant
+  button_restore_identifier: Revenir à l'identifiant original
+
+  text_allowed_characters: Seulement les lettres minuscules (a-z), nombres et tirets sont autorisés.
+
+  activerecord:
+    errors:
+      messages:
+        same_as_identifier: ne peut pas être identique à l'identifiant
+        identifier_exists: identifiant déjà utilisé par un autre projet
