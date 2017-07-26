@@ -27,5 +27,6 @@ Redmine::Plugin.register :redmine_project_alias_2 do
   menu :admin_menu, :project_aliases,
                   { :controller => 'project_aliases', :action => 'index' },
                     :caption => :label_alias_plural,
-                    :after => :projects
+                    :after => :projects,
+                    html: { class: 'icon icon-project_aliases' }
 end
