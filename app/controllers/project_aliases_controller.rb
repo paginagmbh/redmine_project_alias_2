@@ -1,7 +1,7 @@
 class ProjectAliasesController < ApplicationController
     layout 'admin'
 
-    before_filter :require_admin
+    before_action :require_admin
 
     helper :sort
     include SortHelper
@@ -24,7 +24,7 @@ class ProjectAliasesController < ApplicationController
     end
 
     def create
-        @alias = ProjectAlias.new(params[:project_alias])
+        @alias = ProjectAlias.new(params.require(:project_alias).permit(:alias,:project_id))
         if @alias.save
             flash[:notice] = l(:notice_successful_create)
             redirect_to(:action => 'index')

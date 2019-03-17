@@ -22,7 +22,7 @@ Redmine::Plugin.register :redmine_project_alias_2 do
   description 'Allows adding project identifier aliases or renaming of project identifiers.'
   url 'https://github.com/paginagmbh/redmine_project-alias-2'
   version '1.0.4'
-  requires_redmine :version => '2.6'..'3.4'
+  requires_redmine :version_or_higher => '4.0'
 
   menu :admin_menu, :project_aliases,
                   { :controller => 'project_aliases', :action => 'index' },

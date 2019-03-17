@@ -1,4 +1,4 @@
-class AddProjectAliasesUndeletable < ActiveRecord::Migration
+class AddProjectAliasesUndeletable < ActiveRecord::Migration[5.0]
 
     def self.up
         unless column_exists? :project_aliases, :undeletable

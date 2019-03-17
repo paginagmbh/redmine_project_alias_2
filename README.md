@@ -11,9 +11,9 @@ This is a git fork of Andriy Lesyuk's [project_alias](http://projects.andriylesy
 Compatibility
 -------------
 
-**This branch supports Redmine 2.6 and 3.0-3.4 only!**
+**The latest version on `master` branch supports Redmine 4.0 only!**
 
-A Redmine 4.0 compatible version can be found in the [master](https://github.com/paginagmbh/redmine_project-alias-2/tree/master) branch.
+A Redmine 2.6 and Redmine 3.x compatible version can be found in the [redmine-2.6-3.x](https://github.com/paginagmbh/redmine_project_alias_2/tree/redmine-2.6-3.x) branch.
 
 For older version (2.5.x, 2.3.x, 2.2.x, 1.4.x) please download the [original plugin](https://www.redmine.org/plugins/project_alias).
 

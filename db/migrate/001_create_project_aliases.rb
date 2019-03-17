@@ -1,4 +1,4 @@
-class CreateProjectAliases < ActiveRecord::Migration
+class CreateProjectAliases < ActiveRecord::Migration[5.0]
 
     def self.up
         unless table_exists? :project_aliases

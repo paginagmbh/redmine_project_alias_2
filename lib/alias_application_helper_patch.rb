@@ -8,7 +8,8 @@ module AliasApplicationHelperPatch
         base.class_eval do
             unloadable
 
-            alias_method_chain :parse_redmine_links, :project_alias
+            alias_method :parse_redmine_links_without_project_alias, :parse_redmine_links
+            alias_method :parse_redmine_links, :parse_redmine_links_without_project_alias
         end
     end
 
