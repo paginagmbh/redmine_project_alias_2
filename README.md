@@ -5,7 +5,7 @@ This plugin lets you create aliases for project identifiers and also lets you us
 
 This is a git fork of Andriy Lesyuk's [project_alias](http://projects.andriylesyuk.com/projects/project-alias) plugin which seems to be abandoned for a few years now.
 
-*This plugin is listed in the [Redmine plugin directory](http://www.redmine.org/plugins/redmine_project_alias_2)*
+*This plugin is listed in the [Redmine plugin directory](https://www.redmine.org/plugins/redmine_project_alias_2)*
 
 
 Compatibility
@@ -13,7 +13,7 @@ Compatibility
 
 The plugin is tested with Redmine 2.6.x, 3.0 - 3.4.
 
-For older version (2.5.x, 2.3.x, 2.2.x, 1.4.x) please download the [original plugin](http://www.redmine.org/plugins/project_alias2).
+For older version (2.5.x, 2.3.x, 2.2.x, 1.4.x) please download the [original plugin](https://www.redmine.org/plugins/project_alias).
 
 
 Installation and setup
