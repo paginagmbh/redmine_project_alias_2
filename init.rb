@@ -21,7 +21,7 @@ Redmine::Plugin.register :redmine_project_alias_2 do
   author 'Andriy Lesyuk, Tobias Fischer'
   description 'Allows adding project identifier aliases or renaming of project identifiers.'
   url 'https://github.com/paginagmbh/redmine_project-alias-2'
-  version '1.0.3'
+  version '1.0.4'
   requires_redmine :version => '2.6'..'3.4'
 
   menu :admin_menu, :project_aliases,
