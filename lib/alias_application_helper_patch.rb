@@ -9,7 +9,7 @@ module AliasApplicationHelperPatch
             unloadable
 
             alias_method :parse_redmine_links_without_project_alias, :parse_redmine_links
-            alias_method :parse_redmine_links, :parse_redmine_links_without_project_alias
+            alias_method :parse_redmine_links, :parse_redmine_links_with_project_alias
         end
     end
 
