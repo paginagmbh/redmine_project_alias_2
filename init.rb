@@ -3,7 +3,7 @@ require 'redmine'
 Rails.logger.info 'Starting Project Alias 2 plugin for Redmine'
 
 unless String.method_defined?(:html_safe)
-  String.send(:include, AliasStringHTMLSafePatch)
+  String.send(:include, AliasStringHtmlSafePatch)
 end
 unless Project.included_modules.include?(AliasProjectPatch)
   Project.send(:include, AliasProjectPatch)
