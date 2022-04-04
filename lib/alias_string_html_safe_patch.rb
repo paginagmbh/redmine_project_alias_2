@@ -1,4 +1,4 @@
-module AliasStringHTMLSafePatch
+module AliasStringHtmlSafePatch
 
     def self.included(base)
         base.send(:include, InstanceMethods)
